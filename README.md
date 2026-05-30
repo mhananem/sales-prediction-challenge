@@ -7,7 +7,7 @@
 Pair programming competition where the goal was to build a predictive model for daily store sales using historical retail data. The model was trained on 640,000+ rows of data and used to generate predictions on a held-out dataset within a 1-hour window.
 
 **Team:** Hanane  
-**Date:** [Date]  
+**Date:** 30/05/2026
 **Target variable:** `Sales` (daily sales per store)  
 **Metric:** RMSE (Root Mean Squared Error)
 
