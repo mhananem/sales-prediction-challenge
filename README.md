@@ -1,10 +1,12 @@
-# IronKaggle — Sales Prediction Challenge
+# IronKaggle — Sales Prediction Challenge 🏆
+
+> 🥇 **1st place** out of 4 teams — lowest RMSE and highest R² on the final leaderboard.
 
 ## Overview
 
 Pair programming competition where the goal was to build a predictive model for daily store sales using historical retail data. The model was trained on 640,000+ rows of data and used to generate predictions on a held-out dataset within a 1-hour window.
 
-**Team:** Hanane & [Partner name]  
+**Team:** Hanane  
 **Date:** [Date]  
 **Target variable:** `Sales` (daily sales per store)  
 **Metric:** RMSE (Root Mean Squared Error)
@@ -33,7 +35,7 @@ Pair programming competition where the goal was to build a predictive model for 
 ## Methodology
 
 ### 1. Exploratory Data Analysis
-- Inspected shapes, dtypes, and null values across both datasets
+- Inspected shapes, dtypes, and null values across both datasets (train and predict)
 - Checked value distributions for all categorical and binary columns
 - Verified the Open/Sales relationship (closed shops always have Sales = 0)
 
@@ -72,13 +74,24 @@ model = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
 
 ## Results
 
+
+### Model evaluation (test set)
+
 | Metric | Score |
 |---|---|
 | MAE | 645.81 |
 | RMSE | 955.24 |
 | R² | 0.9049 |
 
-The model explains **90.5% of the variance** in daily sales. The average prediction error is ±645 sales units against a mean sales value of ~6,965 — approximately **13.7% of the mean**, which is a strong result for retail sales forecasting without store-level metadata.
+### 🏆 Final leaderboard
+| # | Team | R² | RMSE | MAE |
+|---|---|---|---|---|
+| **1** | **Hanane (us) 🥇** | **0.9795** | **533.85** | **337.32** |
+| 2 | Olga Ale | 0.9776 | 558.56 | 346.24 |
+| 3 | Kanak | 0.9735 | 607.17 | 407.61 |
+| 4 | Radhika | 0.9631 | 716.61 | 458.23 |
+
+The model explains **97.95% of the variance** in daily sales on the final held-out dataset, with an average prediction error of just ±337 sales units — **1st place** in the competition.
 
 ---
 
